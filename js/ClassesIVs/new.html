@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>aug 9 2021</h1>
+  <p id="demo" style = "color:red ;  opacity : 100; transition : all 1s; display : block;">
+    Js is awesome!
+  </p>
+
+   <!-- <img src="bg.png" id="photo" style="width:10%" /> -->
+   <!-- <button type="button" name="button"
+   onclick='document.getElementById("photo").src="bg.png"'>
+    change image1</button> -->
+    <!-- <button type="button" name="button"
+    onclick='document.getElementById("photo").src="bg1.jpg"'>
+     change Image2</button> -->
+
+     <button onclick='changeOpacity()'>
+       change color</button>
+
+
+    <script type=" text/javascript" >
+
+      function changeOpacity(){
+        console.log("runn")
+        let opac=document.getElementById("demo").style.opacity
+        console.log(opac)
+        document.getElementById("demo").style.display=
+        (document.getElementById("demo").style.display=='block'? 'none':'block')
+        setTimeout('changeOpacity()',1000)
+      }
+      let x,y,z; // Declaring variable
+      x = 5;
+      y = 10;
+      z = x + y;
+      let        name    = "apple";
+
+      // let let =233 // not possible
+
+      var number = 5;
+      var string = "apple";
+      var float = 23.3;
+      float = "banana";
+      number = "aatif";
+      string ="200.23";
+      var firstName;
+      firstName="David";
+
+      let a=5;
+      let b=6;
+      a+=b;
+      a=a+b;
+
+      let x= {number1:5,number2:6};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
