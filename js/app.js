@@ -90,7 +90,7 @@ function addToDo(toDo, id, done, trash) {
 
 // add an item to the list user the enter key
 document.addEventListener("keyup", function(even) {
-  if (event.keyCode == 13) {
+  if (event.keyCode === 13) {
     const toDo = input.value;
 
     // if the input isn't empty
@@ -120,7 +120,7 @@ function completeToDo(element) {
   element.classList.toggle(UNCHECK);
   element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
 
-  LIST[element.id].done = LIST[element.id].done ? false : true;
+  LIST[element.id].done = !LIST[element.id].done;
 }
 
 // remove to do
@@ -136,9 +136,9 @@ list.addEventListener("click", function(event) {
   const element = event.target; // return the clicked element inside list
   const elementJob = element.attributes.job.value; // complete or delete
 
-  if (elementJob == "complete") {
+  if (elementJob === "complete") {
     completeToDo(element);
-  } else if (elementJob == "delete") {
+  } else if (elementJob === "delete") {
     removeToDo(element);
   }
 
